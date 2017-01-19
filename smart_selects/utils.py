@@ -53,7 +53,7 @@ def get_queryset(model_class, manager=None, limit_choices_to=None):
 def serialize_results(results):
     return [
         # {'value': item.pk, 'display': force_text(item)} for item in results
-        {'value': str(item.id), 'display': force_text(item)} for item in results
+        {'value': str(item.uuid), 'display': force_text(item)} for item in results
     ]
 
 
